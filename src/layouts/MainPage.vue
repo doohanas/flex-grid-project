@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <TheHeader />
-    <TheSidebar />
-    <TheContent  />
-    <TheFooter />
+  <div class="layout">
+    <TheHeader class="layout-header" />
+    <TheSidebar class="layout-sidebar"/>
+    <TheContent class="layout-content" />
+    <TheFooter class="layout-footer"/>
   </div>
 </template>
 
@@ -23,3 +23,7 @@ export default {
   },
 };
 </script>
+
+<style lang="postcss" scoped>
+@import './MainPage.pcss';
+</style>
