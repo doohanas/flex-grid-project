@@ -1,19 +1,19 @@
 .layout {
-  @apply grid grid-cols-4;
+  @apply grid w-full grid-rows-[auto_auto_auto] grid-cols-[150px_2fr];
 
   &-header {
-    @apply w-full bg-red-700;
+    @apply h-[80px] bg-red-700 col-start-1 col-end-4;
   }
 
   &-sidebar {
-    @apply w-full bg-green-700;
+    @apply bg-green-700;
   }
   
   &-content {
-    @apply w-full bg-blue-700;
+    @apply bg-blue-700;
   }
 
   &-footer {
-    @apply w-full bg-yellow-700;
+    @apply bg-yellow-700 col-start-1 col-end-4;
   }
 }
