@@ -1,10 +1,12 @@
 <template>
   <section>
-    <div v-for="(character) in characters" :key="character.id">
+    <article class="card__container">
+      <div v-for="(character) in characters" :key="character.id">
       <BaseCard
         :data="character"
       />
-    </div>
+      </div>
+    </article>
   </section>
 </template>
 
@@ -31,3 +33,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.card__container {
+  margin: 8px 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  grid-gap: 16px;
+}
+</style>
