@@ -7,10 +7,16 @@
         <FlexWrap />
       </div>
     </section>
-     <section class="section__wrapper">
+    <section class="section__wrapper">
       <h2>2. Squeeze Image</h2>
       <div class="section__container">
         <SqueezeImage />
+      </div>
+    </section>
+    <section class="section__wrapper">
+      <h2>2. Long Content</h2>
+      <div class="section__container">
+        <LongContent />
       </div>
     </section>
   </main>
@@ -19,11 +25,13 @@
 <script>
 import FlexWrap from '../components/Flex/FlexWrap.vue';
 import SqueezeImage from '../components/Flex/SqueezeImage.vue';
+import LongContent from '../components/Flex/LongContent.vue';
 
 export default {
   components: {
     FlexWrap,
     SqueezeImage,
+    LongContent,
   },
 };
 </script>
@@ -54,5 +62,4 @@ export default {
   display: grid;
   place-items: center;
 }
-
 </style>

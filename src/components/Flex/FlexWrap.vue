@@ -3,7 +3,13 @@
     <h2>My Contacts</h2>
     <div class="card__list">
       <div v-for="i in 5" :key="i" class="card__item">
-        <img class="card__item__avatar" :src="`https://i.pravatar.cc/100?img=${i + 1}`" width="32" height="32" alt="avatar" />
+        <img
+          class="card__item__avatar"
+          :src="`https://i.pravatar.cc/100?img=${i + 1}`"
+          width="32"
+          height="32"
+          alt="avatar"
+        />
         <p class="card__item__title">Lorem Ipsum</p>
       </div>
     </div>
