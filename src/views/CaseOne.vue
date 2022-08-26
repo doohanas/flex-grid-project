@@ -14,7 +14,7 @@
       </div>
     </section>
     <section class="section__wrapper">
-      <h2>2. Long Content</h2>
+      <h2>3. Long Content</h2>
       <div class="section__container">
         <LongContent />
       </div>
