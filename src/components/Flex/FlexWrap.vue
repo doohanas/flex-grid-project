@@ -29,7 +29,11 @@ export default {};
 .card__list {
   display: flex;
   justify-content: start;
-  flex-wrap: wrap;
+
+  /**
+   * Using Flex Wrap to prevent item blowout
+   */
+  /* flex-wrap: wrap; */
 }
 
 .card__item {
@@ -52,10 +56,5 @@ export default {};
   font-weight: bold;
   color: #333;
   white-space: nowrap;
-}
-
-.resizable {
-  resize: horizontal;
-  overflow: auto;
 }
 </style>

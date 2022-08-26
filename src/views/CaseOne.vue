@@ -7,15 +7,23 @@
         <FlexWrap />
       </div>
     </section>
+     <section class="section__wrapper">
+      <h2>2. Squeeze Image</h2>
+      <div class="section__container">
+        <SqueezeImage />
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
 import FlexWrap from '../components/Flex/FlexWrap.vue';
+import SqueezeImage from '../components/Flex/SqueezeImage.vue';
 
 export default {
   components: {
     FlexWrap,
+    SqueezeImage,
   },
 };
 </script>
