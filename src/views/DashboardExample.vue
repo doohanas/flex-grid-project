@@ -6,15 +6,23 @@
         <DashboardOne />
       </div>
     </section>
+    <section class="section__wrapper">
+      <h2>Dashboard Layout with Grid Template Areas</h2>
+      <div class="section__container">
+        <DashboardTwo />
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 import DashboardOne from '../components/Grid/DashboardOne.vue';
+import DashboardTwo from '../components/Grid/DashboardTwo.vue';
 
 export default {
   components: {
     DashboardOne,
+    DashboardTwo,
   },
 };
 </script>
