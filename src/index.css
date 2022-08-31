@@ -7,3 +7,8 @@
   resize: horizontal;
   overflow: auto;
 }
+
+.resize-both {
+  resize: both;
+  overflow: auto;
+}

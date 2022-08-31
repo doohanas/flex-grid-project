@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard resizable">
+  <div class="dashboard resize-both">
     <aside class="dashboard__sidebar"></aside>
     <header class="dashboard__header"></header>
     <main class="dashboard__content"></main>
