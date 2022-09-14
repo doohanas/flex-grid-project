@@ -25,6 +25,11 @@ const routes = [
     name: 'case-one',
     component: () => import('../views/CaseOne.vue'),
   },
+  {
+    path: '/case2',
+    name: 'case-two',
+    component: () => import('../views/CaseTwo.vue'),
+  },
 ];
 
 const router = new VueRouter({
