@@ -4,6 +4,14 @@
       <main class="page__item page__item--main">     
         <div class="slider">
           <div v-for="i in 5" :key="i" class="slider__item">
+             <img
+              class="card__item__avatar"
+              src="https://avatars.dicebear.com/api/croodles/:seed.svg"
+              width="32"
+              height="32"
+              alt="avatar"
+            />
+            <p class="card__item__title">Lorem Ipsum</p>
           </div>
         </div>
       </main>
@@ -34,12 +42,11 @@
     min-height: 200px;
     border-radius: 8px;
 
-    &__main {
+    &--main {
        /* prevent the grid item from respecting the
     * minimum content size
     */
-    min-width: 0;
-    
+    /* min-width: 0; */
     }
 
     &__aside {
@@ -53,8 +60,6 @@
   overflow-x: auto;
 
   &__item {
-    width: 40px;
-    height:40px;
     background-color: antiquewhite;
     margin-right: 1rem;
   }
