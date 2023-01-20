@@ -30,7 +30,7 @@
                 <td>{{ item.id }}</td>
                 <td>
                   <transition name="fade">
-                    <img v-if="!isShowTrue" class="inline iconHandle" src="@/assets/drag.png" width="30" height="30" alt="">
+                    <img v-if="!isShowTrue" class="inline iconHandle cursor-move" src="@/assets/drag.png" width="30" height="30" alt="">
                   </transition>
                   {{ item.judul }}
                 </td>
@@ -107,5 +107,10 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+.ghost {
+  opacity: .5;
+  background-color: #C8EBFB;
 }
 </style>
