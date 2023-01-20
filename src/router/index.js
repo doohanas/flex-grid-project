@@ -30,6 +30,11 @@ const routes = [
     name: 'case-two',
     component: () => import('../views/CaseTwo.vue'),
   },
+  {
+    path: '/iphoneDesign',
+    name: 'IphoneDesign',
+    component: () => import('../views/IphoneDesign.vue'),
+  },
 ];
 
 const router = new VueRouter({
