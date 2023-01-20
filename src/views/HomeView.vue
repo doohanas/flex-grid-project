@@ -14,10 +14,12 @@
     <section class="min-w-[500px] min-h-[500px]">
 
       <table class="mx-auto">
-          <thead>    
-              <th class="pr-4" v-for="header in headers" :key="header" scope="col">
+          <thead>
+            <tr>
+              <th v-for="header in headers" :key="header" scope="col">
                 {{ header }}
               </th>
+            </tr>    
           </thead>
             <!-- 
               /**
@@ -25,20 +27,20 @@
               */              
             -->
      
-          <draggable class="max-h-[700px]" v-model="lists" tag="tbody" group="people" :scroll-sensitivity="250"  :force-fallback="true" animation="150" :sort="true" ghost-class="ghost" :disabled="isShowTrue"  handle=".iconHandle">
-            <tr class="h-[300px] border border-red-500" v-for="(item,index) in lists" :key="item.id">
-                <td>{{ item.id }}</td>
-                <td>
-                  <transition name="fade">
-                    <img v-if="!isShowTrue" class="inline iconHandle cursor-move" src="@/assets/drag.png" width="30" height="30" alt="">
-                  </transition>
-                  {{ item.judul }}
-                </td>
-                <td>{{ item.preview }}</td>     
-                <td>{{ index + 1 }}</td>     
-                <td>{{ item.link }}</td>     
-                <td>{{ item.status }}</td>     
-                <td>{{ item.aksi }}</td>     
+          <draggable class="max-h-[700px]" v-model="lists" tag="tbody" group="people" :scroll-sensitivity="250"  :force-fallback="true" animation="150" :sort="true" ghost-class="ghost" :disabled="!isShowTrue"  handle=".iconHandle">
+            <tr class="h-[200px] border border-red-500" v-for="(item,index) in lists" :key="item.id">
+              <td>{{ item.id }}</td>
+              <td>
+                <transition name="fade">
+                  <img v-show="isShowTrue" class="inline iconHandle cursor-move" src="@/assets/drag.png" width="30" height="30" alt="">
+                </transition>
+                {{ item.judul }}
+              </td>    
+              <td>{{ item.preview }}</td>     
+              <td>{{ index + 1 }}</td>         
+              <td>{{ item.link }}</td>     
+              <td>{{ item.status }}</td>             
+              <td>{{ item.aksi }}</td>                
             </tr>
           </draggable>
       </table>
@@ -85,7 +87,6 @@ export default {
               { id: 9, judul: 'Banner jakarta', preview: 'jakarta logo', order: 9, link: 'https://google.com', status: true, aksi: 'Aksi'},
               { id: 10, judul: 'Banner jakarta', preview: 'jakarta logo', order: 10, link: 'https://google.com', status: true, aksi: 'Aksi'}
             ],
-            dragging: false,
             isShowTrue: false
           };
     },
