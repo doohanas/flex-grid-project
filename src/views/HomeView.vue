@@ -19,9 +19,14 @@
                 {{ header }}
               </th>
           </thead>
+            <!-- 
+              /**
+              * If, we have a lot of data, User able to dcroll while dragging. use scroll-sensitivity: number and force-fallback: boolean
+              */              
+            -->
      
-          <draggable v-model="lists" tag="tbody" animation="150" :sort="true" ghost-class="ghost" :disabled="isShowTrue"  handle=".iconHandle">
-            <tr v-for="(item,index) in lists" :key="item.id">
+          <draggable class="max-h-[700px]" v-model="lists" tag="tbody" group="people" :scroll-sensitivity="250"  :force-fallback="true" animation="150" :sort="true" ghost-class="ghost" :disabled="isShowTrue"  handle=".iconHandle">
+            <tr class="h-[300px] border border-red-500" v-for="(item,index) in lists" :key="item.id">
                 <td>{{ item.id }}</td>
                 <td>
                   <transition name="fade">
@@ -38,7 +43,7 @@
           </draggable>
       </table>
 
-      <div class="my-10" v-for="item in lists" :key="item.id">
+      <div class="my-10" v-for="item in finalLists" :key="item.id">
         {{ item }}
       </div>
      
@@ -47,7 +52,7 @@
 </template>
 
 <script>
-import draggable from '@/plugins/draggable';
+import draggable from 'vuedraggable';
 
 export default {
     name: "HomeView",
@@ -69,14 +74,28 @@ export default {
             ],
             headers: ["id", "judul", "preview", "urutan", "link", "status", "aksi"],
             lists: [
-              { id: 1, judul: 'Banner Jabar', preview: 'jabar logo', urutan: 1, link: 'https://google.com', status: true, aksi: 'Aksi'},
-              { id: 2, judul: 'Banner Jatim', preview: 'jatim logo', urutan: 2, link: 'https://google.com', status: false, aksi: 'Aksi'},
-              { id: 3, judul: 'Banner Jogja', preview: 'jogja logo', urutan: 3, link: 'https://google.com', status: false, aksi: 'Aksi'},
-              { id: 4, judul: 'Banner jakarta', preview: 'jakarta logo', urutan: 4, link: 'https://google.com', status: false, aksi: 'Aksi'}
+              { id: 1, judul: 'Banner Jabar', preview: 'jabar logo', order: 1, link: 'https://google.com', status: true, aksi: 'Aksi'},
+              { id: 2, judul: 'Banner Jatim', preview: 'jatim logo', order: 2, link: 'https://google.com', status: true, aksi: 'Aksi'},
+              { id: 3, judul: 'Banner Jogja', preview: 'jogja logo', order: 3, link: 'https://google.com', status: true, aksi: 'Aksi'},
+              { id: 4, judul: 'Banner jakarta', preview: 'jakarta logo', order: 4, link: 'https://google.com', status: true, aksi: 'Aksi'},
+              { id: 5, judul: 'Banner jakarta', preview: 'jakarta logo', order: 5, link: 'https://google.com', status: true, aksi: 'Aksi'},
+              { id: 6, judul: 'Banner jakarta', preview: 'jakarta logo', order: 6, link: 'https://google.com', status: true, aksi: 'Aksi'},
+              { id: 7, judul: 'Banner jakarta', preview: 'jakarta logo', order: 7, link: 'https://google.com', status: true, aksi: 'Aksi'},
+              { id: 8, judul: 'Banner jakarta', preview: 'jakarta logo', order: 8, link: 'https://google.com', status: true, aksi: 'Aksi'},
+              { id: 9, judul: 'Banner jakarta', preview: 'jakarta logo', order: 9, link: 'https://google.com', status: true, aksi: 'Aksi'},
+              { id: 10, judul: 'Banner jakarta', preview: 'jakarta logo', order: 10, link: 'https://google.com', status: true, aksi: 'Aksi'}
             ],
             dragging: false,
             isShowTrue: false
           };
+    },
+    computed: {
+      finalLists () {
+        return this.lists.map((item,index) => ({
+            id: item.id,
+            order: index + 1
+          }))
+      }
     },
     components: { draggable }
 };
