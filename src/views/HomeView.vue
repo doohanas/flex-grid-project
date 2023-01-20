@@ -27,7 +27,7 @@
               */              
             -->
      
-          <draggable class="max-h-[700px]" v-model="lists" tag="tbody" group="people" :scroll-sensitivity="250"  :force-fallback="true" animation="150" :sort="true" ghost-class="ghost" :disabled="!isShowTrue"  handle=".iconHandle">
+          <draggable class="max-h-[700px]" v-model="lists" tag="tbody" :scroll-sensitivity="250" :force-fallback="true" animation="150" ghost-class="ghost" :disabled="!isShowTrue"  handle=".iconHandle">
             <tr class="h-[200px] border border-red-500" v-for="(item,index) in lists" :key="item.id">
               <td>{{ item.id }}</td>
               <td>
