@@ -1,5 +1,5 @@
 <template>
- <section class="absolute w-[1280px] h-[1200px] mx-auto bg-gray-100 rounded-md items-center overflow-hidden">
+ <section class="w-[1280px] h-[1000px] mx-auto bg-gray-100 rounded-md items-center overflow-hidden">
   <h1>Iphone Design using html and css</h1>
   <button class="rounded-md bg-green-500 py-4 px-6 w-fit" @click="isShowIphone = !isShowIphone">Show Iphone</button>
   <!-- add annimation in class binding below -->
