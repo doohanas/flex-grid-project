@@ -40,7 +40,7 @@
                 <img class="w-auto h-auto object-contain" src="@/assets/pisodapur-mobile.jpg" alt="" width="255" height="443" />
               </div>
               <div class="w-full bg-gray-50 flex items-center justify-center pt-2">
-                <a class="rounded-md bg-green-700 p-2 w-full text-sm text-white" href="https://pisodapur.jabarprov.go.id/">Kunjungi Link</a>
+                <a class="rounded-md bg-green-700 p-2 w-full text-sm text-white" href="https://pisodapur.jabarprov.go.id/" target="_blank">Kunjungi Link</a>
               </div>
             </div>
           </div>
