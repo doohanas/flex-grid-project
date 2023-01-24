@@ -1,27 +1,27 @@
 <template>
- <section class="w-[1280px] h-[1000px] mx-auto bg-gray-100 rounded-md items-center overflow-hidden">
+ <section class="w-[1280px] min-h-[450px] mx-auto bg-gray-100 rounded-md overflow-hidden grid grid-cols-1 gap-y-2 justify-center items-center">
   <h1>Iphone Design using html and css</h1>
-  <button class="rounded-md bg-green-500 py-4 px-6 w-fit" @click="isShowIphone = !isShowIphone">Show Iphone</button>
+  <button class="rounded-md bg-green-500 py-4 px-6 w-fit mx-auto" @click="isShowIphone = !isShowIphone">Show Iphone</button>
   <!-- add annimation in class binding below -->
-  <transition name="iphone">
-  <div
-    v-show="isShowIphone" 
-    class="iphone-frame relative m-auto border-solid border-black border-[10px] rounded-[30px] w-[195px] h-[414px] shadow-xl shadow-gray-800"
-    > 
-    <div class="iphone-screen absolute z-10 w-full h-full rounded-[20px] bg-[url('/src/assets/beach.jpg')] bg-no-repeat bg-cover bg-left-bottom">
-      <div class="iphone-notch z-25 absolute top-0 left-[36px] w-[100px] h-[20px] bg-black rounded-[0px_0px_10px_10px]">
-      </div>
-      <div class="iphone-content mt-6 top-[36px] w-full h-fit ">
-        <div class="iphone-apps flex flex-row p-2">
-          <button @click="isShowContent = !isShowContent">
-            <img src="@/assets/chrome.svg" width="36" height="36" alt="">
-          </button>
-        </div>
-      </div>
-      <div :class="{
-        'iphone-modal w-full h-full absolute inset-0 bg-black bg-opacity-40 backdrop-filter backdrop-blur-sm overflow-hidden': isShowContent
-        
-        }"
+  <div class="min-h-[444px]"> 
+    <transition name="iphone">
+      <div
+        v-show="isShowIphone" 
+        class="iphone-frame relative m-auto border-solid border-black border-[10px] rounded-[30px] w-[195px] h-[414px] shadow-xl shadow-gray-800"
+      > 
+        <div class="iphone-screen absolute z-10 w-full h-full rounded-[20px] bg-[url('/src/assets/beach.jpg')] bg-no-repeat bg-cover bg-left-bottom">
+          <div class="iphone-notch z-25 absolute top-0 left-[36px] w-[100px] h-[20px] bg-black rounded-[0px_0px_10px_10px]">
+          </div>
+          <div class="iphone-content mt-6 top-[36px] w-full h-fit ">
+            <div class="iphone-apps flex flex-row p-2">
+              <button @click="isShowContent = !isShowContent">
+                <img src="@/assets/chrome.svg" width="36" height="36" alt="">
+              </button>
+            </div>
+          </div>
+          <div :class="{
+            'iphone-modal w-full h-full absolute inset-0 bg-black bg-opacity-40 backdrop-filter backdrop-blur-sm overflow-hidden': isShowContent
+          }"
         >
         <transition name="content">
           <div v-show="isShowContent" class="absolute w-full h-[calc(100%-20px)] top-4">
@@ -45,10 +45,11 @@
             </div>
           </div>
         </transition>
+          </div>
+        </div>
       </div>
-    </div>
+    </transition>
   </div>
-  </transition>
  </section>
 </template>
 
