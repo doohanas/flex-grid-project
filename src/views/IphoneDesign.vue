@@ -73,7 +73,7 @@ export default {
   transition: all .8s ease-out;
 }
 .iphone-enter, .iphone-leave-to {
-  transform: translateY(1200px);
+  transform: translateY(600px);
 }
 
 .content-enter, .content-leave-to {
