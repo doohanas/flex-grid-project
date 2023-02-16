@@ -35,6 +35,11 @@ const routes = [
     name: 'IphoneDesign',
     component: () => import('../views/IphoneDesign.vue'),
   },
+  {
+    path: '/masonry',
+    name: 'masonry',
+    component: () => import('../views/MasonryLayout.vue'),
+  },
 ];
 
 const router = new VueRouter({

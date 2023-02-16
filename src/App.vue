@@ -6,7 +6,8 @@
       <router-link to="/dashboard-example">Dashboard Example</router-link> |
       <router-link to="/case1">Common Issues with Flex</router-link> |
       <router-link to="/case2">Common Issues with Grid</router-link> |
-      <router-link to="/iphoneDesign">Iphone View Design</router-link>
+      <router-link to="/iphoneDesign">Iphone View Design</router-link> |
+      <router-link to="/masonry">Masonry</router-link>
     </nav>
     <router-view />
   </div>
